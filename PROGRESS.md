@@ -4,23 +4,23 @@ This file is automatically updated as tasks are completed. Agents should read th
 
 ## Overall Status
 - **Not Started**: ☐
-- **In Progress**: ☐
+- **In Progress**: ☑
 - **Completed**: ☐
 
 ## Detailed Checklist (mirrors PLAN.md)
 
 ### Foundations (Weeks 1‑2)
-- [ ] Initialize repository and set up README/LICENSE
-- [ ] Configure `.devcontainer` for consistent development environment
-- [ ] Create base FastAPI app with health check endpoint
-- [ ] Write Dockerfile for API service
-- [ ] Set up docker‑compose with Postgres, Redis, Kafka, Zookeeper
-- [ ] Implement Alembic migrations for agent metadata DB
+- [x] Initialize repository and set up README/LICENSE
+- [x] Configure `.devcontainer` for consistent development environment
+- [x] Create base FastAPI app with health check endpoint
+- [x] Write Dockerfile for API service
+- [x] Set up docker‑compose with Postgres, Redis, Kafka, Zookeeper
+- [x] Implement Alembic migrations for agent metadata DB
 
 ### Agent SDK Wrapper (Weeks 3‑4)
-- [ ] Develop LangChain agent wrapper (base class) with tool interface
+- [x] Develop LangChain agent wrapper (base class) with tool interface
 - [ ] Build agent registration API (POST /agents/register, GET /agents)
-- [ ] Create sample fashion stylist agent (`agents/fashion_stylist/agent.py`)
+- [x] Create sample fashion stylist agent (`agents/fashion_stylist/agent.py`)
 - [ ] Write unit tests for agent wrapper and registration API
 
 ### Marketplace Portal (Weeks 5‑6)
