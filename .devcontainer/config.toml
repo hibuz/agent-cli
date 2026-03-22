@@ -1,0 +1,28 @@
+model_provider = "openrouter"
+model_reasoning_effort = "high"
+
+model = "stepfun/step-3.5-flash:free"
+#model = "nvidia/nemotron-3-super-120b-a12b:free"
+#model = "nvidia/nemotron-3-nano-30b-a3b:free"
+#model = "meta-llama/llama-3.3-70b-instruct:free"
+#model = "z-ai/glm-4.5-air:free"
+#model = "arcee-ai/trinity-large-preview:free"
+#model = "nvidia/nemotron-3-super-120b-a12b:free"
+
+sandbox_mode = "danger-full-access"
+
+[model_providers.openrouter]
+name = "openrouter"
+base_url="https://openrouter.ai/api/v1"
+env_key="ANTHROPIC_AUTH_TOKEN"
+
+[features]
+skills = true
+multi_agent = true
+
+[projects."/workspaces/codex-cli"]
+trust_level = "trusted"
+
+[sandbox]
+workspace_write = true
+network_access = true
