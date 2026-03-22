@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Output",
+  "type": "object",
+  "required": ["recommendation", "explanation"],
+  "properties": {
+    "recommendation": {
+      "type": "string",
+      "description": "The agent's recommended action or item"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Brief justification for the recommendation"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional additional info (confidence, alternatives, etc.)",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

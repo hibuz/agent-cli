@@ -1,0 +1,11 @@
+{
+  "name": "fashion_stylist",
+  "description": "사용자의 스타일 선호도와 현재 날씨/캘린더를 기반으로 옷 추천",
+  "entrypoint": "../../../agents/fashion_stylist/agent.py",
+  "input_schema": "../../../shared/schemas/agent_input.schema.json",
+  "output_schema": "../../../shared/schemas/agent_output.schema.json",
+  "env": {
+    "MODEL": "claude-3-opus",
+    "TEMPERATURE": "0.7"
+  }
+}
