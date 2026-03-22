@@ -1,0 +1,34 @@
+{
+  "name": "Coding Agent with OpenRouter",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    // https://openrouter.ai/docs/guides/coding-agents
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/copilot-cli:1": {},
+    "ghcr.io/stu-bell/devcontainer-features/claude-code:0": {}
+  },
+  "containerEnv": {
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "ANTHROPIC_AUTH_TOKEN": "${localEnv:OPENROUTER_API_KEY}",
+    "ANTHROPIC_API_KEY": "",
+    // claude --dangerously-skip-permissions
+    // /model meta-llama/llama-3.3-70b-instruct:free
+    "ANTHROPIC_MODEL": "nvidia/nemotron-3-super-120b-a12b:free",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "stepfun/step-3.5-flash:free",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "z-ai/glm-4.5-air:free",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "arcee-ai/trinity-large-preview:free",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION": "nvidia/nemotron-3-super-120b-a12b:free",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_NAME": "NVIDIA: Nemotron 3 Super",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION": "NVIDIA: Nemotron 3 Super (free)"
+  },
+  "postCreateCommand": "npm i -g @openai/codex && mkdir -p /home/vscode/.codex && cp .devcontainer/config.toml /home/vscode/.codex/",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "kilocode.kilo-code",
+        "saoudrizwan.claude-dev"
+      ]
+    }
+  }
+}
