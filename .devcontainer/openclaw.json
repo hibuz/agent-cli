@@ -1,0 +1,32 @@
+{
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/stepfun/step-3.5-flash:free",
+        "fallbacks": [
+          "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+        ]
+      },
+      "models": {
+        "openrouter/openrouter/auto": {},
+        "openrouter/stepfun/step-3.5-flash:free": {},
+        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {}
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "botToken": "YOUR_BOT_TOKEN",
+      "dmPolicy": "pairing",
+      "allowFrom": []
+    }
+  }
+}
